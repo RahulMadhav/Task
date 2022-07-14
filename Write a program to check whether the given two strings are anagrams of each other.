@@ -1,0 +1,36 @@
+package july;
+
+import java.util.Arrays;
+
+public class Anagram {
+	public static void main(String[] args) {
+		String a = "arce";
+		String b = "Care";
+
+		a = a.toLowerCase();
+		b = b.toLowerCase();
+
+		if (a.length() == b.length()) {
+
+			char[] c = a.toCharArray();
+			char[] d = b.toCharArray();
+
+			Arrays.sort(c);
+			Arrays.sort(d);
+
+			String e = "", f = "";
+
+			e = Arrays.toString(c);
+			f = Arrays.toString(c);
+
+			if (e.equals(f)) {
+				System.out.println(a + " and " + b + " are anagram.");
+			} else {
+				System.out.println(c + " and " + d + " are not anagram.");
+			}
+		} else {
+			System.out.println(a + " and " + b + " are not anagram.");
+		}
+	}
+
+}
